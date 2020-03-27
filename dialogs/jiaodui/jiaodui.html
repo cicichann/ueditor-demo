@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title></title>
+    <script type="text/javascript" src="../internal.js"></script>
+    <script type="text/javascript" src="../../third-party/jquery-1.10.2.min.js"></script>
+    <style type="text/css">
+        .content {
+            width: 530px;
+            height: 300px;
+            margin: 10px auto;
+        }
+
+        .label {
+            display: inline;
+            padding: .2em .6em .3em;
+            font-size: 75%;
+            font-weight: 700;
+            line-height: 1;
+            color: #fff;
+            text-align: center;
+            white-space: nowrap;
+            vertical-align: baseline;
+            border-radius: .25em;
+        }
+
+        .mg {
+            background-color: #d9534f;
+            color: white;
+            font-style: italic;
+        }
+
+        .cw {
+            background-color: #337ab7;
+            color: white;
+            text-decoration: line-through;
+        }
+
+        .list-inline>li {
+            display: inline-block;
+            padding-right: 5px;
+            padding-left: 5px;
+            line-height: 30px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="content">
+        <ul id="jiaodui" class="list-inline" style="float: left; margin-left: 10px;"><br>
+            <!--
+        <li style=" font-size: 18px;">敏感词错误有 1个:</li>
+        <br>
+        <li><span class="label label-default mg">共产党;</span></li>
+        <br><br>
+
+        <li style=" font-size: 18px;">字词错误有 3个:</li>
+        <br>
+        <li><span class="label label-default cw">习进平</span>&nbsp;推荐正确词：习近平 </li>
+        <li><span class="label label-default cw">别野</span>&nbsp;推荐正确词：别墅 </li>
+        <li><span class="label label-default cw">化夏子孙</span>&nbsp;推荐正确词：华夏子孙</li>
+        <br>
+        -->
+            <!--
+        <li style=" font-size: 18px;">语法错误有 1个:</li>
+        <li><span class="label label-default" style="background-color: #d9534f; color: white;" >轮大法</span></li>
+
+        <li style=" font-size: 18px;">语义错误有 2个:</li>
+        <li><span class="label label-default" style="background-color: #d9534f; color: white;" >好</span>&nbsp;推荐正确词：大法 </li>
+        <li><span class="label label-default" style="background-color: #337ab7; color: white;" >化</span>&nbsp;推荐正确词：子孙 </li>
+        -->
+        </ul>
+        <div style="width:100%;height:300px;margin:5px auto;border:1px solid gray" id="container"></div>
+
+    </div>
+    <script type="text/javascript">
+        // function getZChtml(json) {
+        //     var li = "";
+        //     for (var key in json) {
+        //         var faultValue = key.split("：")[0];
+        //         var rightValue = key.split("：")[1];
+
+        //         li += '<li><span class="label label-default cw">' + faultValue + '</span>&nbsp;推荐正确词：' + rightValue + ' </li>';
+
+        //         var Pos = json[key];
+        //     }
+
+        //     var html = [
+        //         //'<li style=" font-size: 18px;">字词错误有 ' + json.length + '个:</li>',
+        //         '<li style=" font-size: 18px;">字词错误有 :</li>',
+        //         '<br>',
+        //         li,
+        //         '<br><br>'
+        //     ].join("");
+
+        //     return html;
+        // }
+
+        // function getNullhtml() {
+        //     return '<br><br><li style=" font-size: 18px;">未校对出异常结果！</li>';
+        // }
+
+        // function init() {
+        //     var text = editor.getContentTxt();
+        //     var type = ["字词", "敏感词"];
+
+        //     //ajax.request("http://govdev.dev3.trs.org.cn/gov/detector/check/text", {
+        //     //ajax.request("http://localhost/jiaodui", {
+        //     $.ajax({
+        //         //'async': false,
+        //         type: "post",
+        //         //url: "http://govdev.dev3.trs.org.cn/gov/detector/check/text",
+        //         // url: "/gov/detector/check/text",
+        //         url: "/gov/gov.do",
+        //         //'timeout': 10000,
+        //         contentType: "application/json; charset=utf-8",
+        //         dataType: 'json',
+        //         data: JSON.stringify({
+        //             // "checkType": type,
+        //             // "checkContent": text
+        //             "serviceid": "gov_stopword",
+        //             "methodname": "checkStopWord",
+        //             "CHECKCONTENT": text
+        //         }),
+        //         success: function(_json) {
+        //             debugger;
+        //             try {
+        //                 //var json = JSON.parse(_json);
+        //                 var json = _json;
+        //                 var isSuccess = json.ISSUCCESS;
+        //                 // if (isSuccess && json.data["字词"]) {
+        //                 if (isSuccess && json.DATA) {
+        //                     $("#jiaodui").html(getZChtml(json.DATA));
+        //                 } else {
+        //                     // $("#jiaodui").html("未校对出错误结果！");
+        //                     $("#jiaodui").html(json.MSG);
+        //                 }
+        //             } catch (ex) {
+        //                 alert(ex);
+        //             }
+        //             //editor.execCommand('insertHtml',html);
+        //         },
+        //         error: function() {
+        //             alert("请配置web服务器以解决跨域问题!");
+        //             //document.getElementById("jiaodui").innerHTML = getNullhtml();
+        //         }
+        //     });
+        // }
+        // init();
+
+        // dialog.onok = function() {
+        //     var html = editor.getContent();
+        //     //html = html.replace()
+        // };
+    </script>
+
+    <script type="text/javascript" src="jiaodui.js"></script>
+</body>
+
+</html>

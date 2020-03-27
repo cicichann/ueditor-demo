@@ -1,0 +1,70 @@
+/*
+ * 编辑器默认样式 —— Start
+ */
+
+.TRS_UEDITOR {
+    padding: 0;
+    word-wrap: break-word;
+    cursor: text;
+    height: 90%;
+    border: 1px dotted #f5f5f5;
+    padding-top: 1em; /* 解决全选删除时的光标跳闪情况 */
+}
+
+.TRS_UEDITOR>p:first-child {
+    margin-top: 0; /* 解决全选删除时的光标跳闪情况 */
+}
+
+.TRS_UEDITOR img {
+    max-width: 100%;
+    max-height: 100%;
+    height: auto;
+}
+
+.TRS_UEDITOR .anchorclass {
+    height: 16px!important;
+}
+
+/* End */
+
+/*
+ * 分页条样式 —— Start
+ */
+
+.trs_page_separator {
+    display: block;
+    height: 10px;
+    background-color: grey;
+    margin-bottom: 10px;
+}
+
+/*End*/
+
+/* Table */
+
+div[class="ue_table"] {
+    overflow-x: auto;
+    padding-right: 2px; /* 让导入的表格右侧表格线显示出来 */
+}
+
+/* Template */
+
+h1[class="ue_t"], h1[class='ue_customstyle'] {
+    border-bottom-color: #cccccc;
+    border-bottom-width: 2px;
+    border-bottom-style: solid;
+    padding: 0px 4px 0px 0px;
+    text-align: center;
+    margin: 0px 0px 20px;
+    color: #c0504d;
+}
+
+h3[class="ue_t"] {
+    font-family: '幼圆';
+}
+
+.edui-faked-video {
+    background: url("./default/images/videologo.gif") no-repeat center;
+    border: 1px solid #e4e4e4;
+    float: none;
+}
